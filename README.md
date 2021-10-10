@@ -3,25 +3,24 @@
 ## Project Structure
 This is the current structure of the project
 ```shell
-├── app                 # C++ based speech engine
-│   ├── CMakeLists.txt
-│   ├── include         # Top level includes
-│   ├── python-tests    # Component Tests in python
-│   ├── src             # Source code
-│   │   ├── asr         # Automated Speech Recognizer code
-│   │   ├── nlu         # Natural Language Understanding code
-│   │   ├── spotter     # Keyword Spotting code
-│   │   └── tts         # Text to Speech code
-│   │   └── aal         # Audio Abstraction Layer code
-│   │   └── mercies     # Actual application
-│   └── systemd         # Systemd related files
-├── Dockerfile
-├── docs                # Markdown style documentation
-├── explore             # Experiments run in python
-│   └── notebooks       # Jupyter Notebooks
-├── Jenkinsfile
+mainApp
+├── CMakeLists.txt		
+├── Dockerfile			# Docker 
+├── docs			# docs and images
+│   └── images
+│       └── url.png
+├── explore			# Experimental juypter notebook for tts 
+│   └── notebooks
+│       └── tts_tflite.ipynb
+├── LICENSE
+├── model			# tflite models
 ├── README.md
-└── scripts             # Helper scripts
+├── scripts 			# Helper Scripts
+└── src				# Source Code
+    ├── audioplayer 		# Pulse Audio based Audio player (W.I.P)
+    ├── main			# Actual Start of Application 
+    └── tts			# Text-to-Speech Application based on tflite
+
 ```
 
 # Setup Docker 
