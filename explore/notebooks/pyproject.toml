@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mysetp"
+version = "0.1.0"
+description = ""
+authors = ["Tarang Patel <tarang.patel@daimler.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+jupyter = "^1.0.0"
+ipykernel = "^5.5.5"
+tensorflow = "^2.5.0"
+PySoundFile = "^0.9.0"
+PyYAML = "^5.4.1"
+llvmlite = "0.36.0rc1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
