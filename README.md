@@ -63,7 +63,7 @@ $vocodermodel$ = model/mb_melgan.tflite
 
 
 Note
-develop an own tensorflow-lite model and infer using this C++ code
+develop an own tensorflow-lite model and replace model 
 
 ``` 
 
