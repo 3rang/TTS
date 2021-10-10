@@ -32,14 +32,13 @@ mkdir workspace-name
 cd workspace-name
 
 # clone the repo.
-git clone ssh://git@git.swf.daimler.com:7999/mbient/mercies.git
-cd mercies/
-
+git clone git@github.com:3rang/TTS.git
+cd TTS/
 # Build the docker container to setup development environment
 docker build -f Dockerfile -t tts .
  
 # run docker 
-docker run -v $PWD:/home/tts/mercies --network host -it tts:latest
+docker run -v $PWD:/home/TTS/ --network host -it tts:latest
 
 ```
 
