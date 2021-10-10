@@ -1,4 +1,4 @@
-# NAME
+# Deep Learning Based TTS (Text-to-Speech) Application for Embedded Device (x86 and ARM )
 
 ## Project Structure
 This is the current structure of the project
