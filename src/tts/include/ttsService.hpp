@@ -1,7 +1,4 @@
 
-// SPDX-FileCopyrightText: 2021 MBition GmbH
-//
-// SPDX-License-Identifier: Closed software
 
 
 #ifndef INC_TTSSERVICE_HPP_

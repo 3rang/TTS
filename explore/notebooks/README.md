@@ -3,35 +3,12 @@
 
 ## Download models
 
-* fastspeech2 model
     
 ```shell
-curl -u<USERNAME>:<PASSWORD> -O "https://artifact.swf.daimler.com/mbient-bin-delivery/speech/mercies/tts/fastspeech2_quan.tflite"
-```
-* vocoder model
-
-```shell
-curl -u<USERNAME>:<PASSWORD> -O "https://artifact.swf.daimler.com/mbient-bin-delivery/speech/mercies/tts/mb_melgan.tflite"
-```
-
-* mel-vocoder yaml config file 
-
-```shell
-curl -u<USERNAME>:<PASSWORD> -O "https://artifact.swf.daimler.com/mbient-bin-delivery/speech/mercies/tts/melgan.v1.yaml"
+git clone https://github.com/3rang/TTS/tree/main/model
 ```
 
 
-* ljspeech database json file 
-
-```shell
-curl -u<USERNAME>:<PASSWORD> -O "https://artifact.swf.daimler.com/mbient-bin-delivery/speech/mercies/tts/ljspeech_mapper.json"
-```
-
-
-
-**NOTE** :  **USERNAME** and **PASSWORD** of artifactory
-
-**NOTE** :  model should be saved in the same folder (/mercies/explore/notebooks).
 
 ## Enviroment setup   
 

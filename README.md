@@ -34,6 +34,7 @@ cd workspace-name
 # clone the repo.
 git clone git@github.com:3rang/TTS.git
 cd TTS/
+
 # Build the docker container to setup development environment
 docker build -f Dockerfile -t tts .
  
