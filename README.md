@@ -1,4 +1,4 @@
-# NAME
+# Deep Learning Based Text-to-Speech (TTS) for Embedded Linux Platform
 
 ## Project Structure
 This is the current structure of the project
