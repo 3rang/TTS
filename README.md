@@ -42,9 +42,3 @@ docker build -f Dockerfile -t tts .
 docker run -v $PWD:/home/TTS/ --network host -it tts:latest
 
 ```
-
-# Build the Application 
-
-# High Level Arquitecture
-
-## More coming soon..

@@ -1,11 +1,31 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-RUN pip3 install wheel && \
- pip3 install tensorflow && \
- pip3 install tensorflow-cpu
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    git \
+    cmake \
+    wget \
+    unzip \
+    python3 \
+    python3-pip \
+    python3-venv \
+    curl \
+    nlohmann-json3-dev \
+    vim 
+
+
+RUN pip install wheel && \
+ pip install tensorflow && \
+ pip install tensorflow-cpu
 
 RUN  cd /tmp && \
  git clone https://github.com/tensorflow/tensorflow.git && \
+ cd /tmp/tensorflow/tensorflow/lite/ && \
+ git switch --detach v2.6.0 && \
  cd /tmp/tensorflow/tensorflow/lite/ && \
  mkdir build && cd build && \
  cmake .. && make -j${nproc} && \
@@ -17,13 +37,16 @@ RUN ./tmp/tensorflow/tensorflow/lite/tools/make/download_dependencies.sh && \
  cp -r /tmp/tensorflow/tensorflow /usr/include/ && \
  cp -r /tmp/tensorflow/tensorflow/lite/build/flatbuffers/include/flatbuffers /usr/include/
 
-ARG userid=1000
-ARG groupid=1000
-ARG username=dev
-ARG groupname=dev
 
-RUN groupadd -o -g ${groupid} ${groupname} && useradd -o --no-log-init -m -u ${userid} -g ${groupname} ${username}
+RUN cd /tmp && \
+    git clone https://github.com/3rang/TTS.git && \
+    cd TTS && \
+    mkdir build && cd build && \
+    cmake .. && make -j${nproc} 
+    
 
-USER ${username}
 
-CMD ["/bin/ash"]
+WORKDIR /tmp
+
+
+CMD ["bash"]
